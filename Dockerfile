@@ -1,5 +1,9 @@
 FROM ubuntu:xenial
 
+############################### DO NOT DERIVE FROM BASE IMAGES ###############################
+# Keep this image simple so that it can still be built if the whole infrastructure goes down #
+##############################################################################################
+
 # Pre-install some utilities needed to install the rest of the software
 RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommends \
     locales \
