@@ -45,7 +45,7 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
        stable"
 
 RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommends \
-    docker-ce && \
+    docker-ce-cli && \
     apt-get -q autoremove && \
     apt-get -q clean -y && rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/*.bin
 
