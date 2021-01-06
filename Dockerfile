@@ -79,7 +79,7 @@ RUN \
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
-ENV DOCKER_HOST tcp://dind
+#ENV DOCKER_HOST tcp://dind
 
 # Standard SSH port
 EXPOSE 22
