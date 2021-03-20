@@ -83,5 +83,7 @@ EXPOSE 22
 COPY init.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/init.sh
 
+USER jenkins
+
 # Default command
 CMD init.sh && exec /usr/sbin/sshd -D
