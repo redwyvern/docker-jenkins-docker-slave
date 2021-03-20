@@ -80,5 +80,8 @@ ENV DOCKER_HOST tcp://dind
 # Standard SSH port
 EXPOSE 22
 
+COPY init.sh /usr/local/bin/
+RUN chmod a+x /usr/local/bin/init.sh
+
 # Default command
-CMD ["/usr/sbin/sshd", "-D"]
+CMD init.sh && exec /usr/sbin/sshd -D
